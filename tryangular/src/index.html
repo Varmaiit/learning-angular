@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular 1.6.5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script> -->
+    
+    <!-- Local -->
+    <script src="js/angular.min.js"></script>
+    <style>
+        .new-class {
+            font-size: 72px;
+        }
+        .other-class {
+            font-size: 90px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="new-class" ng-class="{'other-class': name=='Varma'}">Hello <span ng-if="name">{{ name }}</span> <span ng-if="!name">Chaitanya</span>!</h1>
+    <input type="text" name="" ng-model='name' />
+</body>
+</html>
