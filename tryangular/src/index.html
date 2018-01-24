@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app='tryangular'>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Angular 1.6.5</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!-- CDN -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script> -->
     
     <!-- Local -->
     <script src="js/angular.min.js"></script>
+    <script src="js/app/app.module.js"></script>
+    <script src="js/app/app.config.js"></script>
+
+    <!-- Blog List Controller -->
+    <script src="js/app/blog-list/blog-list.module.js"></script>
+    <script src="js/app/blog-list/blog-list.component.js"></script>
+
     <style>
         .new-class {
             font-size: 72px;
@@ -23,5 +29,12 @@
 <body>
     <h1 class="new-class" ng-class="{'other-class': name=='Varma'}">Hello <span ng-if="name">{{ name }}</span> <span ng-if="!name">Chaitanya</span>!</h1>
     <input type="text" name="" ng-model='name' />
+
+    <blog-list></blog-list>
+    <!-- <div class="" ng-controller="BlogListController">
+        <h1 class="new-class">{{ title }}</h1>
+        <button ng-click="someClickTest()">Click me!</button>
+    </div> -->
+
 </body>
 </html>
